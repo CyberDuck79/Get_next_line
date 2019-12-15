@@ -6,7 +6,7 @@
 /*   By: fhenrion <fhenrion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/15 14:55:17 by fhenrion          #+#    #+#             */
-/*   Updated: 2019/12/15 17:22:50 by fhenrion         ###   ########.fr       */
+/*   Updated: 2019/12/16 00:29:41 by fhenrion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,6 @@
 #  define BUFFER_SIZE 1024
 # endif
 
-long	next_line(char *s);
-size_t	str_copy(char *dst, const char *src, char end);
-char	*new_line(size_t count);
-int		remain_copy(int fd, char **rmn, char *buf, char **line);
-int		read_fd(int fd, char **rmn, char **line, size_t offset);
 int		get_next_line(const int fd, char **line);
 
 #endif
