@@ -6,13 +6,13 @@
 /*   By: fhenrion <fhenrion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/15 14:55:38 by fhenrion          #+#    #+#             */
-/*   Updated: 2019/12/16 00:32:49 by fhenrion         ###   ########.fr       */
+/*   Updated: 2019/12/16 10:22:55 by fhenrion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-static long		next_line(char *s)
+static long		next_line(const char *s)
 {
 	long		index;
 
