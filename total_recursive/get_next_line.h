@@ -6,7 +6,7 @@
 /*   By: fhenrion <fhenrion@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/15 14:55:17 by fhenrion          #+#    #+#             */
-/*   Updated: 2019/12/16 00:29:41 by fhenrion         ###   ########.fr       */
+/*   Updated: 2019/12/19 10:52:36 by fhenrion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,9 @@
 #  define BUFFER_SIZE 1024
 # endif
 
-# if BUFFER_SIZE < 0
-#  undef BUFFER_SIZE
-#  define BUFFER_SIZE 1024
-# endif
-
+long	next_line(const char *s);
+size_t	str_copy(char *dst, const char *src, char end, int close);
+char	*new_line(size_t count);
 int		get_next_line(const int fd, char **line);
 
 #endif
