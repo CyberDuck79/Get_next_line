@@ -14,5 +14,5 @@ fsanitize address and leaks checked.
 POST PROJECT VALIDATION :  
 total recursive version :  
 Single malloc for the totality of the reading via recursion.  
-Save buffers on the call stack since end of file or detection of '\n' in a current buffer,  
+Save buffers on the stack since end of file or detection of '\n' in a current buffer,  
 then malloc, return and reverse copy the buffers. (really fast !)  
