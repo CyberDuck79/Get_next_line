@@ -12,32 +12,17 @@
 
 #include "get_next_line.h"
 
-long	next_line(const char *s)
-{
-	long	index;
-
-	index = 0;
-	while (s[index])
-	{
-		if (s[index] == '\n')
-			return (index);
-		index++;
-	}
-	return (-1);
-}
-
-size_t	str_copy(char *dst, const char *src, char end, int close)
+size_t	rmn_restore(char *dst, char *src)
 {
 	size_t	copylen;
 
 	copylen = 0;
-	while (src[copylen] != end)
+	while (src[copylen])
 	{
 		dst[copylen] = src[copylen];
 		copylen++;
 	}
-	if (close)
-		dst[copylen] = '\0';
+	*src = '\0';
 	return (copylen);
 }
 
@@ -49,4 +34,27 @@ char	*new_line(size_t count)
 		return (NULL);
 	new[count] = '\0';
 	return (new);
+}
+
+int		next_line_index(const char *s)
+{
+	int	index;
+
+	index = 0;
+	while (s[index] && s[index] != '\n')
+		index++;
+	return (s[index] == '\n' ? index : -1);
+}
+
+void	rmn_save(char *dst, const char *src)
+{
+	while (*src)
+		*dst++ = *src++;
+	*dst = '\0';
+}
+
+void	buf_copy(char *dst, const char *src, char end)
+{
+	while (*src != end)
+		*dst++ = *src++;
 }

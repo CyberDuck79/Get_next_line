@@ -21,9 +21,12 @@
 #  define BUFFER_SIZE 1024
 # endif
 
-long	next_line(const char *s);
-size_t	str_copy(char *dst, const char *src, char end, int close);
+
+size_t	rmn_restore(char *dst, char *src);
 char	*new_line(size_t count);
+int 	next_line_index(const char *s);
+void	rmn_save(char *dst, const char *src);
+void	buf_copy(char *dst, const char *src, char end);
 int		get_next_line(const int fd, char **line);
 
 #endif
